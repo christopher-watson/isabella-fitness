@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Archivo+Narrow|Roboto);
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background: #f1f6f8;
+  font-family: 'Roboto', sans-serif;
+}
+
+#wrapper{
+  max-width: device-width;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  /*content: '';*/
+  /*display: block;*/
+  clear: both;
+  padding: 1%;
+}
+
+#logo{
+  margin: 10px;
+  float: left;
+}
+
+header{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+header li{
+  display: block;
+}
+
+.home-bg{
+  background-image: url(../img/isa-banner.jpg);
+  padding: 8em 0;
+  height: 100% auto;
+  width: 100% auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid red;
+}
+
+nav ul{
+  margin: 0;
+  padding: 1em;
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  margin: 1em;
+}
+
+
+/*   MOBILE   */ /*
+@media screen and (max-width: 768px){
+  .home-bg{
+    height: 80px;
+    position: relative;
+  }
+}
+
+*/
+
+
+* { border: 1px solid black; }
