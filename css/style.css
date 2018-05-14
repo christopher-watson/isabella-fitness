@@ -111,7 +111,7 @@ i:hover {
   width: 100vw;
   grid-template-rows: repeat(5, min-content);
   grid-template-columns: 1fr;
-  grid-template-areas: "row1" "row2" "row3" "row4" "row5";
+  grid-template-areas: "row2-1" "row2-2" "row2-3" "row2-4" "row2-5";
 }
 
 .row {
@@ -125,10 +125,10 @@ i:hover {
   color: white;
 }
 
-.row1 {
-  grid-area: row1;
+.row2-1 {
+  grid-area: row2-1;
   display: grid;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: minmax(min-content, 1fr) 3fr;
   grid-template-rows: min-content;
   grid-template-areas: "a1 b1";
 }
@@ -139,14 +139,43 @@ i:hover {
   padding: 10px;
 }
 
-.i-text{
+.a-area-text{
   display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-template-rows: min-content;
-  grid-template-areas: "left right";
-  margin: 10px 0;
+  grid-template-columns: min-content max-content;
+  grid-template-rows: 70px;
+  grid-template-areas: "L R";
+  /* width: minmax(50px, 290px); */
+  width: 290px;
+  margin: 0 auto;
+}
+
+.icon{
+  grid-area: L;
+  width: 100%;
+  padding-left: 20px;
 }
 
 .inner-text, p{
-  margin: 5px 0 5px 5px;
+  grid-area: R;
+  padding: 5px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 870px) {
+  .a-area-text{
+    width: 60px;
+  }
+  .inner-text{
+    display: none;
+  }
+  .a1{
+    padding: 10px 30px 10px 10px;
+  }
 }
