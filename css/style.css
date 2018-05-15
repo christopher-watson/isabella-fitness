@@ -21,7 +21,7 @@ html {
 body {
   color: var(--white);
   font-size: 16px;
-  background: var
+  /* background: var(--GREYdient); */
 }
 
 a,
@@ -117,12 +117,12 @@ i:hover {
 .row {
   margin: 0;
   border-top: 2px solid var(--white);
-  background: black;
+  background: var(--black);
 }
 
 .row-item {
   font-size: 40px;
-  color: white;
+  color: var(--white);
 }
 
 .row2-1 {
@@ -133,49 +133,58 @@ i:hover {
   grid-template-areas: "a1 b1";
 }
 
-.a1 {
+.a-area {
   grid-area: a1;
+  display: grid;
   border-right: 2px solid var(--white);
   padding: 10px;
 }
 
-.a-area-text{
+.a-container{
+  align-self: center;
+}
+
+.a-area-text {
   display: grid;
   grid-template-columns: min-content max-content;
   grid-template-rows: 70px;
   grid-template-areas: "L R";
-  /* width: minmax(50px, 290px); */
   width: 290px;
-  margin: 0 auto;
+  height: min-content;
+  margin: auto;
 }
 
-.icon{
+.icon {
   grid-area: L;
   width: 100%;
   padding-left: 20px;
 }
 
-.inner-text, p{
+.inner-text,
+p {
   grid-area: R;
   padding: 5px;
   width: 100%;
 }
 
+.a-area-top {
+  margin-top: 10px;
+}
 
-
-
-
+.b-area-bg{
+  background-image: url('./../img/strawberries.jpg');
+}
 
 
 
 @media only screen and (max-width: 870px) {
-  .a-area-text{
+  .a-area-text {
     width: 60px;
   }
-  .inner-text{
+  .inner-text {
     display: none;
   }
-  .a1{
+  .a1 {
     padding: 10px 30px 10px 10px;
   }
 }
